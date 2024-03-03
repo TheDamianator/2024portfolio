@@ -31,31 +31,32 @@ export default function Navigation() {
     };
 
     return (
-        <div className="fixed top-1/2 right-2 transform -translate-y-1/2 z-50">
+        <div className="fixed top-2 left-2 z-50">
             {/* Hamburger menu icon */}
             <button
                 className="block md:hidden text-gray-800 hover:text-gray-500 focus:outline-none"
                 onClick={toggleMobileMenu}
             >
-                <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                    {isMobileMenuOpen ? (
-                        <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M4 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 5h16a1 1 0 010 2H4a1 1 0 010-2zm0 5h16a1 1 0 010 2H4a1 1 0 010-2z"
-                        />
-                    ) : (
-                        <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M4 6h16a1 1 0 110 2H4a1 1 0 110-2zm0 5h16a1 1 0 110 2H4a1 1 0 110-2zm0 5h16a1 1 0 110 2H4a1 1 0 110-2z"
-                        />
-                    )}
+                <svg className="h-8 w-8 fill-current" viewBox="0 0 24 24">
+                    <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M4 6h16a1 1 0 110 2H4a1 1 0 110-2zm0 5h16a1 1 0 110 2H4a1 1 0 110-2zm0 5h16a1 1 0 110 2H4a1 1 0 110-2z"
+                    />
                 </svg>
             </button>
             {/* Mobile menu */}
-            <div className={`md:hidden absolute top-14 right-0 w-40 bg-white rounded shadow-lg ${isMobileMenuOpen ? '' : 'hidden'}`}>
-                <div className="p-4">
+            <div className={`md:hidden fixed top-0 left-0 w-screen h-screen bg-darkgreen bg-opacity-90 flex justify-center items-center transition-opacity duration-300 ${isMobileMenuOpen ? '' : 'opacity-0 pointer-events-none'}`}>
+                <div className="flex flex-col items-center">
+                    <button onClick={toggleMobileMenu} className="absolute top-2 right-2 text-accentbrown">
+                        <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path
+                                fillRule="evenodd"
+                                clipRule="evenodd"
+                                d="M6.7 6.7a1 1 0 0 0-1.4 1.4L10.6 12l-5.3 5.3a1 1 0 1 0 1.4 1.4L12 13.4l5.3 5.3a1 1 0 1 0 1.4-1.4L13.4 12l5.3-5.3a1 1 0 0 0-1.4-1.4L12 10.6l-5.3-5.3z"
+                            />
+                        </svg>
+                    </button>
                     <NavLink to="landingpage" activeLink={activeLink} onClick={() => { handleSetActive("landingpage"); toggleMobileMenu(); }}>Home</NavLink>
                     <NavLink to="about" activeLink={activeLink} onClick={() => { handleSetActive("about"); toggleMobileMenu(); }}>About</NavLink>
                     <NavLink to="projects" activeLink={activeLink} onClick={() => { handleSetActive("projects"); toggleMobileMenu(); }}>Projects</NavLink>
@@ -84,9 +85,9 @@ function NavLink({ to, children, activeLink, onClick }) {
             className={`block text-accentbrown hover:text-gray-300 mb-4 ml-4 font-custom nav-link ${activeLink === to ? 'font-bold' : ''}`}
             activeClass="font-bold"
             onClick={onClick}
-            style={{ cursor: 'pointer' }}
+            style={{ cursor: 'pointer', fontSize: '1.4rem' }} // Adjust text size here
         >
-             {activeLink === to ? `{${children}}` : children}
+            {children}
         </Link>
     );
 }
