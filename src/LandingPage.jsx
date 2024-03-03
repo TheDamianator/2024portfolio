@@ -1,6 +1,5 @@
 import React from "react";
-import dutchFlag from "./assets/dutch.png"; // Import the Dutch flag image
-import ukFlag from "./assets/uk.png"; // Import the UK flag image
+
 import circleImage from "./assets/circle2.png";
 
 export default function LandingPage() {
@@ -12,16 +11,8 @@ export default function LandingPage() {
                         <p className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl text-accentbrown mb-6">HI THERE, I'M <br/> DAMIAN CAELEN.</p>
                         {/* Different text for mobile */}
                         <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl text-accentbrown flex justify-center items-center">
-                            {/* Mobile version of text */}
-                            <span>A passionate student from NL</span>
-                            {/* Only show the flags on screens larger than md */}
-                            <img src={dutchFlag} alt="Dutch flag" className="h-4 w-auto mx-1 hidden md:block" />
-                            {/* Mobile version of text */}
-                            <span>who also speaks fluent English</span>
-                            {/* Only show the flags on screens larger than md */}
-                            <img src={ukFlag} alt="UK flag" className="h-4 w-auto mx-1 hidden md:block" />
-                            {/* Mobile version of text */}
-                            <span>and loves coding.</span>
+                           
+                        Born and raised in the Netherlands, I am a dedicated student of UI/UX design, fluent in English, <br/> and driven by a profound passion for crafting seamless digital experiences through code.
                         </p>
                         {/* Circle image for mobile */}
                         <img

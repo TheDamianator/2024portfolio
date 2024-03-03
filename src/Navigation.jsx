@@ -31,7 +31,7 @@ export default function Navigation() {
     };
 
     return (
-        <div className="fixed top-2 left-2 z-50">
+        <div className="fixed top-2 right-2 z-50">
             {/* Hamburger menu icon */}
             <button
                 className="block md:hidden text-gray-800 hover:text-gray-500 focus:outline-none"
@@ -87,7 +87,7 @@ function NavLink({ to, children, activeLink, onClick }) {
             onClick={onClick}
             style={{ cursor: 'pointer', fontSize: '1.4rem' }} // Adjust text size here
         >
-            {children}
+             {activeLink === to ? `{${children}}` : children}
         </Link>
     );
 }
