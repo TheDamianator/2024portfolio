@@ -7,9 +7,9 @@ export default function LandingPage() {
         <>
             <div id="landingpage">
                 <div className="bg-primarywhite h-screen font-custom font-bold flex justify-center items-center relative">
-                    <div className="font-display text-left px-8 relative z-10">
-                        <p className="text-8xl text-accentbrown mb-6">HI THERE, I'M <br/> DAMIAN CAELEN.</p>
-                        <p className="text-sm text-accentbrown flex justify-center items-center">
+                    <div className="font-display text-left px-8 relative z-10 text-center">
+                        <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl text-accentbrown mb-6">HI THERE, I'M <br/> DAMIAN CAELEN.</p>
+                        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl text-accentbrown flex justify-center items-center">
                             <span> A passionate student from </span>
                             <img src={dutchFlag} alt="Dutch flag" className="h-4 w-auto mx-1" />
                             <span> who also speaks fluent </span>
