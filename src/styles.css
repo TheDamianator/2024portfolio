@@ -1,0 +1,12 @@
+/* src/styles.css or src/styles.scss */
+
+@font-face {
+    font-family: 'Overused Grotesk';
+    src: url('../fonts/ttf/OverusedGrotesk-Black.ttf') format('truetype'); /* Regular font file */
+}
+
+@font-face {
+    font-family: 'Overused Grotesk Bold';
+    src: url('../fonts/ttf/OverusedGrotesk-Bold.ttf') format('truetype'); /* Bold font file */
+    /* Additional font properties like font-weight and font-style can be specified here if needed */
+}
