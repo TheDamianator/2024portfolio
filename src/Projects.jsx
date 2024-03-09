@@ -30,22 +30,22 @@ export default function Projects() {
   return (
     <div id="projects" className="bg-primarywhite min-h-screen font-custom font-bold flex flex-col justify-center items-center relative">
       <h1 className="text-7xl text-accentbrown mb-8">PROJECTS</h1>
-      <div className="grid gap-4 sm:grid-cols-3 sm:gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8">
+      <div className="grid gap-4 mx-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
-          <div key={index} className="flex flex-col items-center min-h-96"> {/* Adjusted minimum height */}
-            <div className="flex flex-col items-center"> {/* Updated flex container */}
+          <div key={index} className="flex flex-col items-center my-4"> {/* Added my-4 for vertical margin */}
+            <div className="flex flex-col items-center w-full max-w-md"> {/* Adjusted width to be responsive */}
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-100 h-auto object-cover rounded-2xl" // Added rounded-lg class
+                className="w-full h-auto object-cover rounded-lg" // Adjusted image size to be responsive
               />
-              <div className=" text-left"> {/* Removed flex-grow class */}
-                <h2 className="text-xl text-accentbrown mb-4">{project.title}</h2>
-                <p className="w-96">{project.description}</p>
+              <div className="text-left mt-4"> {/* Added mt-4 for top margin */}
+                <h2 className="text-xl text-accentbrown mb-2">{project.title}</h2> {/* Adjusted margin */}
+                <p className="">{project.description}</p> {/* Removed width restriction */}
                 <div className="flex space-x-2 mt-2">
-                  <div className="outline outline-1 rounded-2xl p-1 text-xs">{project.btn1}</div>
-                  <div className="outline outline-1 rounded-2xl p-1 text-xs">{project.btn2}</div>
-                  <div className="outline outline-1 rounded-2xl p-1 text-xs bg-secondarygreen outline-secondarygreen">{project.btn3}</div>
+                  <div className="rounded-lg p-1 text-xs border border-gray-400">{project.btn1}</div> {/* Added border for better visibility */}
+                  <div className="rounded-lg p-1 text-xs border border-gray-400">{project.btn2}</div>
+                  <div className="rounded-lg p-1 text-xs bg-secondarygreen border border-secondarygreen">{project.btn3}</div>
                 </div>
               </div>
             </div>
