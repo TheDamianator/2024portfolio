@@ -40,7 +40,7 @@ export default function About() {
                         <div className="font-display text-left px-8 max-w-md">
                             <p className="text-8xl  text-accentbrown mb-12">ABOUT ME</p>
                             <div className="mb-6">
-                                <p className="text-sm text-accentbrown mb-6">Welcome to my portfolio! I'm passionate about crafting exceptional web experiences that not only look stunning but also deliver seamless functionality. Below, you'll find a showcase of my expertise, my coding and the design tools I use to sculpt great experiences.</p>
+                                <p className="text-m text-accentbrown mb-6">Welcome to my portfolio! I'm passionate about crafting exceptional web experiences that not only look stunning but also deliver seamless functionality. Below, you'll find a showcase of my expertise, my coding and the design tools I use to sculpt great experiences.</p>
                             </div>
                             <div className="mb-8">
                                 <p className="text-3xl text-accentbrown mb-4">Check out my stack!</p>

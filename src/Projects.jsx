@@ -1,29 +1,39 @@
-import React from "react";
-import jumbo from "./assets/projects/Jumbosmall.png";
-import dummy from "./assets/projects/dummysmall.png";
+import React, { useState } from "react";
+
+import Jumbo from "./assets/projects/Jumbo.png";
+import Boxplosive from "./assets/projects/Boxplosive.png";
+import LDR from "./assets/projects/LDR.png";
 
 export default function Projects() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   const projects = [
     { 
       title: "Jumbo", 
-      image: jumbo, 
+      image: Jumbo, 
       url: "#", 
-      description: "Throughout this project I collaborated with Jumbo as a school project.",
+      description: "A collaboration with Jumbo JTC that creates A.I based recipes tailor made for you",
       btn1: "Design",
       btn2: "Development",
       btn3: "Jumbo"
     },
     { 
-      title: "Bolt IT", 
-      image: dummy, 
+      title: "Boxplosive", 
+      image: Boxplosive, 
       url: "#", 
-      description: "Bolt IT is a revolutionary software solution that aims to streamline project management workflows. With intuitive user interfaces and powerful backend algorithms, Bolt IT ensures that your projects are delivered on time and within budget. Say goodbye to project management headaches and hello to Bolt IT!" 
+      description: "During my first internship, i was tasked to explore the use of non-fungible tokens (NFTs) in the company's existing app, who supplies loyalty programs to companies such as Etos, Blokker and more." ,
+      btn1: "Design",
+      btn2: "Development",
+      btn3: "Boxplosive"
     },
     { 
-      title: "BieSjefke", 
-      image: dummy, 
+      title: "The LDR Project", 
+      image: LDR, 
       url: "#", 
-      description: "BieSjefke is a cozy café located in the heart of the city. With its rustic charm and welcoming atmosphere, BieSjefke is the perfect spot to unwind with friends or catch up on work. From artisanal coffee to mouthwatering pastries, BieSjefke offers a delightful selection of treats to satisfy your cravings." 
+      description: "A.I Based story telling game that goes through the hardships that make a long distance relationship work." ,
+      btn1: "Design",
+      btn2: "A.I",
+      btn3: "Storytelling"
     },
   ];
 
@@ -32,18 +42,28 @@ export default function Projects() {
       <h1 className="text-7xl text-accentbrown mb-8">PROJECTS</h1>
       <div className="grid gap-4 mx-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
-          <div key={index} className="flex flex-col items-center my-4"> {/* Added my-4 for vertical margin */}
-            <div className="flex flex-col items-center w-full max-w-md"> {/* Adjusted width to be responsive */}
+          <div 
+            key={index} 
+            className="flex flex-col items-center my-4"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            style={{
+              transform: hoveredIndex === index ? "scale(1.05)" : "scale(1)",
+              transition: "transform 0.3s ease-in-out",
+            }}
+          >
+            <div className="flex flex-col items-center w-full max-w-md">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-auto object-cover rounded-lg" // Adjusted image size to be responsive
+                className="w-full h-auto object-cover rounded-lg"
+               
               />
-              <div className="text-left mt-4"> {/* Added mt-4 for top margin */}
-                <h2 className="text-xl text-accentbrown mb-2">{project.title}</h2> {/* Adjusted margin */}
-                <p className="">{project.description}</p> {/* Removed width restriction */}
+              <div className="text-left mt-4">
+                <h2 className="text-xl text-accentbrown mb-2">{project.title}</h2>
+                <p className="text-m text-accentbrown mb-2">{project.description}</p>
                 <div className="flex space-x-2 mt-2">
-                  <div className="rounded-lg p-1 text-xs border border-gray-400">{project.btn1}</div> {/* Added border for better visibility */}
+                  <div className="rounded-lg p-1 text-xs border border-gray-400">{project.btn1}</div>
                   <div className="rounded-lg p-1 text-xs border border-gray-400">{project.btn2}</div>
                   <div className="rounded-lg p-1 text-xs bg-secondarygreen border border-secondarygreen">{project.btn3}</div>
                 </div>
