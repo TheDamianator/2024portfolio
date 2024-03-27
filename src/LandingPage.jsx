@@ -1,6 +1,8 @@
 import React from "react";
 
 import circleImage from "./assets/circle2.png";
+import Rectangle from "./assets/Rectangle 1.png";
+
 
 export default function LandingPage() {
     return (
@@ -18,14 +20,14 @@ export default function LandingPage() {
                         <img
                             src={circleImage}
                             alt=""
-                            className="md:hidden absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4/6 opacity-75 z-0"
+                            className="md:hidden absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4/6 opacity-100 z-0"
                         />
                     </div>
                     {/* Conditionally render the image based on screen size */}
                     <img
-                        src="/src/assets/Rectangle 1.png"
+                        src={Rectangle}
                         alt=""
-                        className="hidden md:block absolute top-1/5 left-1/2 transform -translate-x-1/2 w-1/3 opacity-75 z-0"
+                        className="hidden md:block absolute top-1/5 left-1/2 transform -translate-x-1/2 w-1/3 opacity-100 z-0"
                     />
                 </div>
             </div>
