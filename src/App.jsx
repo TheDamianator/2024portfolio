@@ -1,21 +1,19 @@
-import React from "react";
-import LandingPage from "./LandingPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from './HomePage';
 import Navigation from "./Navigation";
-import About from "./About";
-import Projects from "./Projects";
-import Contact from "./Contact";
+import Jumbo from "./Jumbo";
 
-import './styles.css';
-
-export default function App() {
+function App() {
   return (
-    <>
-    
+    <BrowserRouter>
       <Navigation/>
-      <LandingPage/>
-      <About/>
-      <Projects/>
-      <Contact/>
-    </>
-  )
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/Jumbo" element={<Jumbo />} />
+
+      </Routes>
+    </BrowserRouter>
+  );
 }
+
+export default App;

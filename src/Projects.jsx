@@ -11,7 +11,7 @@ export default function Projects() {
     { 
       title: "Jumbo", 
       image: Jumbo, 
-      url: "#", 
+      url: "/Jumbo", 
       description: "A collaboration with Jumbo JTC that creates A.I based recipes tailor made for you",
       btn1: "Design",
       btn2: "Development",
@@ -52,7 +52,8 @@ export default function Projects() {
               transition: "transform 0.3s ease-in-out",
             }}
           >
-            <div className="flex flex-col items-center w-full max-w-md">
+            <a href={project.url}>
+            <div  className="flex flex-col items-center w-full max-w-md">
               <img
                 src={project.image}
                 alt={project.title}
@@ -69,6 +70,7 @@ export default function Projects() {
                 </div>
               </div>
             </div>
+            </a>
           </div>
         ))}
       </div>

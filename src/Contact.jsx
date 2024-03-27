@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+// import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 
 export default function Contact() {
@@ -33,11 +33,11 @@ export default function Contact() {
                 <h2 className="text-4xl sm:text-6xl text-accentbrown mb-4">Let's stay in C<span className="white-text">O</span>NTACT</h2>
                 <div className="text-left mb-8 flex flex-col items-center"> {/* Center vertically */}
                     <a href="mailto:damiancaelen@gmail.com" className="text-lg sm:text-xl text-primarywhite mb-2">
-                        <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                        {/* <FontAwesomeIcon icon={faEnvelope} className="mr-2" /> */}
                         damiancaelen@gmail.com
                     </a> <br></br>
                     <a href="https://linkedin.com/damiancaelen" className="text-lg sm:text-xl text-primarywhite hover:underline">
-                        <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
+                        {/* <FontAwesomeIcon icon={faLinkedin} className="mr-2" /> */}
                         linkedin.com/damiancaelen
                     </a>
                 </div>
