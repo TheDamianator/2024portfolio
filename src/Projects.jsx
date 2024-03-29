@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Fade } from 'react-reveal';
 
 import Jumbo from "./assets/projects/Jumbo.png";
 import Boxplosive from "./assets/projects/Boxplosive.png";
@@ -42,9 +43,11 @@ export default function Projects() {
       <h1 className="text-7xl text-accentbrown mb-8">PROJECTS</h1>
       <div className="grid gap-4 mx-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
+
+         
           <div 
             key={index} 
-            className="flex flex-col items-center my-4"
+            className="flex drop-shadow-2xl flex-col items-center my-4"
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
             style={{
@@ -52,6 +55,8 @@ export default function Projects() {
               transition: "transform 0.3s ease-in-out",
             }}
           >
+         
+
             <a href={project.url}>
             <div  className="flex flex-col items-center w-full max-w-md">
               <img
@@ -66,7 +71,7 @@ export default function Projects() {
                 <div className="flex space-x-2 mt-2">
                   <div className="rounded-lg p-1 text-xs border border-gray-400">{project.btn1}</div>
                   <div className="rounded-lg p-1 text-xs border border-gray-400">{project.btn2}</div>
-                  <div className="rounded-lg p-1 text-xs bg-secondarygreen border border-secondarygreen">{project.btn3}</div>
+                  <div className="rounded-lg p-1 text-xs text-lightertext bg-secondarygreen border border-secondarygreen">{project.btn3}</div>
                 </div>
               </div>
             </div>

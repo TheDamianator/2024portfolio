@@ -9,8 +9,12 @@ export default {
     colors: {
       primarywhite:'#E8E8E3',
       accentbrown: '#393632',
-      secondarygreen:'#AFAF9D',
+      secondarygreen:'#080807',
       darkgreen:'#cfcfba',
+      lightertext:'#BFBFB1',
+      NavigationText:'#1f2937',
+      NewColorNav:'#A1714F',
+
     },
     fontFamily: {
       'sans': ['Oswald', 'sans-serif'],

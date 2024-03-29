@@ -29,8 +29,8 @@ export default function Contact() {
         <div id="contact" className="bg-secondarygreen min-h-screen font-custom font-bold flex flex-col justify-center items-center relative">
            
             <div className="text-center mb-8">
-                <h1 className="text-5xl sm:text-9xl text-accentbrown mb-4">GET IN T<span className="white-text">O</span>UCH</h1>
-                <h2 className="text-4xl sm:text-6xl text-accentbrown mb-4">Let's stay in C<span className="white-text">O</span>NTACT</h2>
+                <h1 className="text-5xl sm:text-9xl text-lightertext mb-4">GET IN T<span className="white-text">O</span>UCH</h1>
+                <h2 className="text-4xl sm:text-6xl text-lightertext mb-4">Let's stay in C<span className="white-text">O</span>NTACT</h2>
                 <div className="text-left mb-8 flex flex-col items-center"> {/* Center vertically */}
                     <a href="mailto:damiancaelen@gmail.com" className="text-lg sm:text-xl text-primarywhite mb-2">
                         {/* <FontAwesomeIcon icon={faEnvelope} className="mr-2" /> */}
@@ -43,7 +43,7 @@ export default function Contact() {
                 </div>
             </div>
 
-            <div className="absolute bottom-0 left-0 right-0 p-8 bg-secondarygreen text-accentbrown flex justify-between">
+            <div className="absolute bottom-0 left-0 right-0 p-8 bg-secondarygreen text-lightertext flex justify-between">
                 <div className="text-sm sm:text-base flex items-center">
                     &copy; 2024 Damian Caelen
                 </div>

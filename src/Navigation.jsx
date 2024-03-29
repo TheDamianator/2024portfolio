@@ -14,7 +14,7 @@ export default function Navigation() {
     return (
         <div className="fixed top-2 right-2 z-50">
             {/* Hamburger menu icon */}
-            <button className="block md:hidden text-gray-800 hover:text-gray-500 focus:outline-none" onClick={toggleMobileMenu}>
+            <button className="block md:hidden text-NewColorNav hover:text-NewColorNav focus:outline-none" onClick={toggleMobileMenu}>
                 <svg className="h-8 w-8 fill-current" viewBox="0 0 24 24">
                     <path
                         fillRule="evenodd"
@@ -24,9 +24,9 @@ export default function Navigation() {
                 </svg>
             </button>
             {/* Mobile menu */}
-            <div className={`md:hidden fixed top-0 left-0 w-screen h-screen bg-darkgreen bg-opacity-90 flex justify-center items-center transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+            <div className={`md:hidden fixed top-0 left-0 w-screen h-screen bg-secondarygreen bg-opacity-90 flex justify-center items-center transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
                 <div className="flex flex-col items-center">
-                    <button onClick={toggleMobileMenu} className="absolute top-3 right-8 text-accentbrown">
+                    <button onClick={toggleMobileMenu} className="absolute top-3  right-3 text-lightertext">
                         <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
                             <path
                                 fillRule="evenodd"
@@ -66,8 +66,8 @@ function NavLink({ href, children, onClick }) {
     };
 
     return (
-        <a href={href} onClick={handleClick} className="text-accentbrown hover:text-gray-300 mb-4 ml-4 font-custom nav-link text-base md:text-lg">
-            {children}
-        </a>
+        <a href={href} onClick={handleClick} className="text-NewColorNav hover:text-HoverColorNav mb-4 ml-4 font-bold font-custom nav-link text-base md:text-lg text-xl">
+        {children}
+    </a>
     );
 }
